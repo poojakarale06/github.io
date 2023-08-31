@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pooja Karale's Personal Website.. Angular Developer">
+    <meta name="keywords" content="Pooja, Pooja Karale">
+    <meta name="author" content="Pooja Karale">
+    <meta name="google-site-verification" content="AUkNqtUIrnxcUmRsF1bdeCarm4w4pozYhGX8PSC_a54" />
+    <meta property='og:image' content='./image/header3.jpg' />
+    <title>Pooja Karale | Personal Website</title>
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" sizes="96*96">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #add8e680;
+        }
+
+        .masthead {
+            height: 30vh;
+            min-height: 500px;
+            background-image: url('./image/header3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .top-head {
+            /* background-color: rgba(128, 128, 128, 0.7) !important; */
+            background-color: #4169e1 !important;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #00008b !important;
+        }
+
+        .m-l-5 {
+            margin-left: 5px;
+        }
+
+        .social-networking {
+            font-size: 20px;
+            color: white;
+
+        }
+
+        .social-networking :hover {
+            color: #00008b;
+            transform: scale(1.7)
+        }
+
+        .progress-bar {
+            background: #4169e1;
+            width: 0%;
+            height: 1%;
+        }
+
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #4169e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            border: 4px solid #fff;
+            animation: loader 2s infinite ease;
+        }
+
+        .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #fff;
+            animation: loader-inner 2s infinite ease-in;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(180deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loader-inner {
+            0% {
+                height: 0%;
+            }
+
+            25% {
+                height: 0%;
+            }
+
+            50% {
+                height: 100%;
+            }
+
+            75% {
+                height: 100%;
+            }
+
+            100% {
+                height: 0%;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_RnLHd8BmxpHmoucE2T5aa");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div id="fadeout" class="wrapper">
+        <span class="loader">
+            <span class="loader-inner" style="text-align: center; font-weight: bold;">
+            </span>
+        </span>
+    </div>
+
+    <div id="body" style="display: none;">
+        <nav id="navBar" class="navbar navbar-expand-lg navbar-light bg-dark shadow top-head">
+            <div class="container">
+                <a class="navbar-brand">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#profile"><i class="fa fa-user" aria-hidden="true"></i>
+                                Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="modal" data-target="#blogs"><i class="fa fa-rss"
+                                    aria-hidden="true"></i>
+                                Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i>
+                                Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="progress_bar" class="progress-bar fixed-top"></div>
+
+
+        <header class="masthead">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div id="prof" style="margin-top: 350px; color: white; display:none;" class="col-12 text-center">
+                        <h1 id="iAmPooja" class="font-weight-dark animate__animated">Hello There, I Am
+                            Pooja</h1>
+                        <p id="iAmPooja" class="lead animate__animated animate__backInDown">Web Application Developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="py-5">
+            <div class="container">
+                <div id="profile" class="card bg-light shadow"
+                    style="width:100%; background-color: #4169e1 !important;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="card-img-top" src="./image/me_1.jpeg" alt="Card image"
+                                style="width:100%;padding: 20px;">
+                            <div class="shadow" style="margin:0px 20px 0px 20px ;">
+                                <div style="text-align: center;">
+                                    <a class="btn m-l-5 social-networking" title="stack-overflow" target="_blank"
+                                        href="https://stackoverflow.com/users/22476069/pooja-karale"><i
+                                            class="fa fa-stack-overflow"></i></a>
+                                    <a class="btn m-l-5 social-networking" title="github" target="_blank"
+                                        href="https://github.com/poojakarale06"><i class="fa fa-github"></i></a>
+                                    <a class="btn m-l-5 social-networking" title="linkedin" target="_blank"
+                                        href="https://in.linkedin.com/in/poojakarale06"><i
+                                            class="fa fa-linkedin"></i></a>
+                                    <a class="btn m-l-5 social-networking" title="instagram" href="#"><i
+                                            class="fa fa-instagram"></i></a>
+                                    <a class="btn m-l-5 social-networking" title="facebook" href="#"><i
+                                            class="fa fa-facebook-square"></i></a>
+                                </div>
+                                <div style="text-align: center;">
+                                    <h3 class="social-networking"><strong>Social Networking</strong></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding:40px 30px" class="col-md-8">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card" style="background-color: #add8e680 !important;">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link text-dark" type="button" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                About Self
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Name: <span class="text-muted">Pooja
+                                                        Karale</span><span class="m-l-5">Date Of Birth: <span
+                                                            class="text-muted">06<sup>th</sup> Sept 1994</span> </span>
+                                                </li>
+                                                <li class="list-group-item">Address: <span class="text-muted">
+                                                        Pune </span></li>
+                                                <li class="list-group-item">Email: <span
+                                                        class="text-muted">poojakarale06@gmail.com</span>
+                                                </li>
+                                                <li class="list-group-item">Phone: <span
+                                                        class="text-muted">8600558190</span></li>
+                                                <li class="list-group-item">Designation: <span class="text-muted">Web
+                                                        Application
+                                                        Developer </span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="background-color: #add8e680 !important;">
+                                    <div class="card-header" id="headingTwo">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link text-dark" type="button" data-toggle="collapse"
+                                                data-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                                Education
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="accordion" id="educationExample">
+                                                <div class="card">
+                                                    <div class="card-header" id="headingSSC">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <h2 class="mb-0">
+                                                                    <button class="btn btn-link text-dark" type="button"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseSSC" aria-expanded="false"
+                                                                        aria-controls="collapseSSC">
+                                                                        SSC
+                                                                    </button>
+                                                                </h2>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h2 class="mb-0">
+                                                                    <button class="btn btn-link text-dark" type="button"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseHSC" aria-expanded="false"
+                                                                        aria-controls="collapseHSC">
+                                                                        HSC
+                                                                    </button>
+                                                                </h2>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h2 class="mb-0">
+                                                                    <button class="btn btn-link text-dark" type="button"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseGraduation"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseGraduation">
+                                                                        UG
+                                                                    </button>
+                                                                </h2>
+                                                            </div>
+                                                            <!-- <div class="col-3">
+                                                                <h2 class="mb-0">
+                                                                    <button class="btn btn-link text-dark" type="button"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapsePostGraduation"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapsePostGraduation">
+                                                                        PG
+                                                                    </button>
+                                                                </h2>
+                                                            </div> -->
+                                                        </div>
+
+                                                    </div>
+                                                    <div id="collapseSSC" class="collapse" aria-labelledby="headingSSC"
+                                                        data-parent="#educationExample">
+                                                        <div class="card-body">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">Institute : <span
+                                                                        class="text-muted">T.L Joshi Vidyalaya,
+                                                                        Wai</span>
+                                                                </li>
+                                                                <li class="list-group-item">Year: <span
+                                                                        class="text-muted">March 2010</span></li>
+                                                                <li class="list-group-item">Percentage: <span
+                                                                        class="text-muted">89%</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div id="collapseHSC" class="collapse" aria-labelledby="headingHSC"
+                                                        data-parent="#educationExample">
+                                                        <div class="card-body">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">Institute : <span
+                                                                        class="text-muted">Kisanveer Mahavidyalaya,
+                                                                        Wai</span>
+                                                                </li>
+                                                                <li class="list-group-item">Year: <span
+                                                                        class="text-muted">February 2012</span></li>
+                                                                <li class="list-group-item">Percentage: <span
+                                                                        class="text-muted">65%</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div id="collapseGraduation" class="collapse"
+                                                        aria-labelledby="headingGraduation"
+                                                        data-parent="#educationExample">
+                                                        <div class="card-body">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">Institute : <span
+                                                                        class="text-muted">Kisanveer Mahavidyalaya,
+                                                                        Wai, Pune</span>
+                                                                </li>
+                                                                <li class="list-group-item">Course: <span
+                                                                        class="text-muted">BSC</span>
+                                                                </li>
+                                                                <li class="list-group-item">Year: <span
+                                                                        class="text-muted">June 2015</span></li>
+                                                                <li class="list-group-item">Percentage: <span
+                                                                        class="text-muted">73%</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div id="collapsePostGraduation" class="collapse"
+                                                        aria-labelledby="headingPostGraduation"
+                                                        data-parent="#educationExample">
+                                                        <div class="card-body">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">Institute : <span
+                                                                        class="text-muted">Sinhgad Institute of
+                                                                        Management, Pune</span>
+                                                                </li>
+                                                                <li class="list-group-item">Course: <span
+                                                                        class="text-muted">MBA in Marketing</span>
+                                                                </li>
+                                                                <li class="list-group-item">Year: <span
+                                                                        class="text-muted">June 2019</span></li>
+                                                                <li class="list-group-item">Percentage: <span
+                                                                        class="text-muted">67.00%</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div> -->
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="background-color: #add8e680 !important;">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link text-dark" type="button" data-toggle="collapse"
+                                                data-target="#collapseThree" aria-expanded="false"
+                                                aria-controls="collapseThree">
+                                                Experience
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Organisation : <span
+                                                        class="text-muted">Cybertech Solutiuons</span>
+                                                </li>
+                                                <li class="list-group-item">Duration : 2+ years<span id="expDuration"
+                                                        class="text-muted"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="background-color: #add8e680 !important;">
+                                    <div class="card-header" id="headingFour">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link text-dark" type="button" data-toggle="collapse"
+                                                data-target="#collapseFour" aria-expanded="false"
+                                                aria-controls="collapseFour">
+                                                Certification
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav id="contact" class="navbar navbar-expand-lg navbar-light bg-dark shadow bottom"
+            style="background-color: #4169e1 !important;">
+            <div class="container-fluid" style="min-height: 200px;color: white;">
+             <div></div>
+            </div>
+        </nav>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center;">
+                        &copy; Copyright, All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="blogs" tabindex="-1" role="dialog" aria-labelledby="blogs" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="blogs">Blogs</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <span class="text-muted">No Blogs Posted Yet</span>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Email response Modal -->
+        <div class="modal fade" id="emailResponse" tabindex="-1" role="dialog" aria-labelledby="emailResponse"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="emailResponseMessage"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+
+        function calculateExp() {
+            var days = Math.ceil((new Date().getTime() - new Date('03/13/2019').getTime()) / (1000 * 60 * 60 * 24))
+            var exp = function calculateTiming(d) {
+                let months = 0, years = 0, days = 0, weeks = 0;
+                while (d) {
+                    if (d >= 365) {
+                        years++;
+                        d -= 365;
+                    } else if (d >= 30) {
+                        months++;
+                        d -= 30;
+                    } else if (d >= 7) {
+                        weeks++;
+                        d -= 7;
+                    } else {
+                        days++;
+                        d--;
+                    }
+                };
+                return {
+                    years, months, weeks, days
+                };
+            };
+            console.log(exp(days));
+            document.getElementById('expDuration').innerText = exp(days).years + " Years, " + exp(days).months + " Months, " + + exp(days).weeks + " Weeks, " + exp(days).days + " Days";
+        }
+
+        function fadeout() {
+            setTimeout(function () {
+                document.getElementById('body').style.display = "block";
+                document.getElementById('prof').style.display = "block";
+
+                document.getElementById('navBar').classList.add('fixed-top');
+                var element = document.getElementById('iAmPooja')
+                element.classList.add('animate__backInDown')
+                setTimeout(function () {
+                    element.classList.replace('animate__backInDown', 'animate__swing');
+                    element.classList.add('animate__slower');
+                }, 1200)
+            }, 1000)
+            //calculateExp();
+        }
+
+        window.onload = function () {
+            window.setTimeout(function () {
+                document.getElementById('fadeout').style.opacity = '0';
+                fadeout();
+            }, 1000);
+
+        }
+
+
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress_bar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+
+</html>
